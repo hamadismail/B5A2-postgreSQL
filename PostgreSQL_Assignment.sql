@@ -69,4 +69,8 @@ LEFT JOIN sightings s ON r.ranger_id = s.ranger_id
 GROUP BY r.name
 ORDER BY r.name;
 
-
+-- Problem 5️⃣
+SELECT sp.common_name
+FROM species sp
+LEFT JOIN sightings s ON sp.species_id = s.species_id
+WHERE s.species_id IS NULL;
