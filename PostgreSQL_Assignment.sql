@@ -1,8 +1,6 @@
 -- Create Database
 CREATE DATABASE conservation_db;
 
--- DROP TABLE rangers, species, sightings;
-
 -- Create Tables
 CREATE TABLE rangers (
     ranger_id SERIAL PRIMARY KEY,
@@ -44,10 +42,6 @@ INSERT INTO sightings (species_id, ranger_id, location, sighting_time, notes) VA
 (2, 2, 'Bankwood Area', '2024-05-12 16:20:00', 'Juvenile seen'),
 (3, 3, 'Bamboo Grove East', '2024-05-15 09:10:00', 'Feeding observed'),
 (1, 2, 'Snowfall Pass', '2024-05-18 18:30:00', NULL);
-
-SELECT * FROM rangers;
--- DELETE FROM rangers
--- WHERE ranger_id = 6
 
 -- Problem 1️⃣
 INSERT INTO rangers (name, region)
@@ -96,6 +90,3 @@ SELECT sighting_id,
            ELSE 'Evening'
        END AS time_of_day
 FROM sightings;
-
-
-
